@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: #FAFAFA;
+    display: flex;
+  }
+
+  .left {
+    flex: 1;
+    padding: 56px 0 56px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .logo-icon svg {
+    display: block;
+  }
+
+  .logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3F3F46;
+    letter-spacing: -0.02em;
+  }
+
+  .logo-accent { color: #2563EB; }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: #09090B;
+  }
+
+  .subtitle {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 18px;
+    color: #71717A;
+    line-height: 1.5;
+    max-width: 380px;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 32px;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #09090B;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-value.accent { color: #2563EB; }
+
+  .stat-label {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    color: #A1A1AA;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+
+  /* Right side — week grid */
+  .right {
+    width: 500px;
+    padding: 40px 48px 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .grid-wrapper {
+    position: relative;
+  }
+
+  .week-grid {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    gap: 2.5px;
+    width: 390px;
+  }
+
+  .week {
+    aspect-ratio: 1;
+    border-radius: 1.5px;
+  }
+
+  .week-lived { background: #18181B; }
+  .week-chapter-indigo { background: #6366F1; }
+  .week-chapter-sky { background: #38BDF8; }
+  .week-chapter-teal { background: #2DD4BF; }
+  .week-chapter-honey { background: #FBBF24; }
+  .week-chapter-coral { background: #F87171; }
+  .week-chapter-lavender { background: #C084FC; }
+  .week-empty { background: #E4E4E7; }
+  .week-chapter-rose { background: #F472B6; }
+  .week-current { background: #6366F1; box-shadow: 0 0 0 1.5px #FAFAFA, 0 0 0 3px #6366F1; }
+
+  /* Fade edges */
+  .grid-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, #FAFAFA);
+    pointer-events: none;
+  }
+
+  .grid-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, transparent, #FAFAFA);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Year labels */
+  .year-labels {
+    position: absolute;
+    left: -24px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .year-label {
+    font-size: 8px;
+    color: #A1A1AA;
+    height: calc((390px / 26) + 2.5px);
+    display: flex;
+    align-items: center;
+    font-variant-numeric: tabular-nums;
+  }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="logo-row">
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <rect x="2" y="2" width="12" height="12" rx="2.5" fill="#18181B"/>
+          <rect x="18" y="2" width="12" height="12" rx="2.5" fill="#2563EB"/>
+          <rect x="2" y="18" width="12" height="12" rx="2.5" fill="#18181B"/>
+          <rect x="18" y="18" width="12" height="12" rx="2.5" fill="#E4E4E7"/>
+        </svg>
+      </div>
+      <span class="logo-text"><span class="logo-accent">In</span> Weeks</span>
+    </div>
+
+    <div class="hero">
+      <div class="title">
+        Your life,<br>
+        in weeks.
+      </div>
+      <div class="subtitle">
+        See your 4,000 weeks as a grid. Color them by life chapters. Confront the finite. Share the picture.
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-value">4,160</span>
+        <span class="stat-label">Total weeks</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value accent">52</span>
+        <span class="stat-label">Per year</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">244</span>
+        <span class="stat-label">Countries</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="grid-wrapper">
+      <div class="week-grid" id="grid"></div>
+    </div>
+  </div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const totalCols = 26;
+    const totalRows = 40;
+    const total = totalCols * totalRows;
+
+    // Simulate a ~30 year old person with chapters
+    const livedRows = 15; // ~30 years shown in 26-col layout = ~15 rows of lived
+    const currentIndex = livedRows * totalCols + 8;
+
+    // Chapter ranges (in week indices)
+    const chapters = [
+      { start: 0, end: 3 * totalCols, cls: 'week-lived' },             // childhood
+      { start: 3 * totalCols, end: 5 * totalCols + 13, cls: 'week-chapter-indigo' },    // school
+      { start: 5 * totalCols + 13, end: 8 * totalCols, cls: 'week-chapter-lavender' },  // university
+      { start: 8 * totalCols, end: 10 * totalCols + 10, cls: 'week-chapter-teal' }, // first job
+      { start: 10 * totalCols + 10, end: 12 * totalCols, cls: 'week-chapter-honey' }, // travel
+      { start: 12 * totalCols, end: currentIndex, cls: 'week-chapter-coral' },          // current chapter
+    ];
+
+    for (let i = 0; i < total; i++) {
+      const div = document.createElement('div');
+      div.className = 'week';
+
+      if (i === currentIndex) {
+        div.classList.add('week-current');
+      } else if (i < currentIndex) {
+        let found = false;
+        for (const ch of chapters) {
+          if (i >= ch.start && i < ch.end) {
+            div.classList.add(ch.cls);
+            found = true;
+            break;
+          }
+        }
+        if (!found) div.classList.add('week-lived');
+      } else {
+        div.classList.add('week-empty');
+      }
+
+      grid.appendChild(div);
+    }
+  </script>
+</body>
+</html>

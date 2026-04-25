@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  height: var(--header-height);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-fg);
+  letter-spacing: -0.03em;
+}
+
+.logoAccent {
+  color: var(--color-accent);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  color: var(--color-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.iconButton:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-fg);
+}
+
+.iconButton:active {
+  transform: scale(0.93);
+}
+
+/* Reset confirm dialog */
+.confirmBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+
+.confirmIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--color-destructive);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmText {
+  font-size: var(--text-sm);
+  color: var(--color-muted-fg);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.confirmActions {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.confirmActions > * {
+  flex: 1;
+}

@@ -1,0 +1,57 @@
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-full);
+  background: var(--color-muted);
+  transition: background var(--duration-fast) var(--ease-out);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggle.checked {
+  background: var(--color-accent);
+}
+
+.sm {
+  width: 36px;
+  height: 20px;
+}
+
+.md {
+  width: 44px;
+  height: 24px;
+}
+
+.thumb {
+  position: absolute;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+.sm .thumb {
+  width: 16px;
+  height: 16px;
+}
+
+.md .thumb {
+  width: 20px;
+  height: 20px;
+}
+
+.checked .thumb {
+  transform: translateX(16px);
+}
+
+.sm.checked .thumb {
+  transform: translateX(16px);
+}
+
+.md.checked .thumb {
+  transform: translateX(20px);
+}

@@ -1,0 +1,21 @@
+{
+  "name": "In Weeks — Your Life Visualized",
+  "short_name": "In Weeks",
+  "description": "Visualize your entire life as a grid of weeks. See how many you've lived, how many remain, and color them by life chapters.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAFA",
+  "theme_color": "#6366F1",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

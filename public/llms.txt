@@ -1,0 +1,37 @@
+# In Weeks — https://inweeks.org
+
+## What is this?
+In Weeks is a free, open-source web tool that visualizes a human life as a grid of approximately 4,000 weeks. It helps people confront the finite nature of time by showing how many weeks they've lived and how many remain.
+
+## How it works
+1. Enter your birthday
+2. Select your country (life expectancy data for 244 countries/territories from UN World Population Prospects)
+3. Optionally select gender for more specific life expectancy
+4. See your life as an interactive grid of week squares — filled for lived weeks, empty for remaining
+5. Add "life chapters" (school, career, travel, relationships, etc.) with colors
+6. Generate and share a portrait image of your life grid
+
+## Key features
+- Interactive canvas-rendered grid of ~4,000 weeks
+- Life expectancy data for 244 countries and territories
+- Colored life chapters with 10 preset colors
+- Animated grid reveal
+- Shareable story-size image (1080x1920)
+- Dark mode
+- 100% client-side — no server, no tracking, no cookies, no account
+- Data stored only in browser localStorage
+
+## Technical details
+- Built with React 19, TypeScript, Vite
+- Canvas-based grid rendering for performance
+- html-to-image for share card generation
+- Zero backend dependencies
+- ~84KB gzipped total
+
+## Links
+- Website: https://inweeks.org
+- Source code: https://github.com/zeck00/inweeks
+- Author: Ziad (https://ziad.us)
+
+## Inspiration
+Inspired by Tim Urban's "Your Life in Weeks" from Wait But Why, which visualizes a 90-year life as a grid of weeks to illustrate how finite and precious time is.

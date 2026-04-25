@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.columnHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-2);
+}
+
+.axisLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  color: var(--color-muted-fg);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.gridContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.canvas {
+  display: block;
+  cursor: crosshair;
+}
