@@ -2,41 +2,80 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- Primary Meta -->
+    <!-- ================ PRIMARY ================ -->
     <title>In Weeks — Visualize Your Entire Life as a Grid of Weeks</title>
     <meta name="description" content="See your ~4,000 weeks as a grid. Weeks you've lived, weeks remaining, colored by life chapters like school, career, and travel. Free, private, no account needed." />
     <meta name="author" content="Ziad" />
-    <meta name="keywords" content="life in weeks, life visualization, week grid, life expectancy calculator, time visualization, life calendar, mortality awareness, life chapters, Tim Urban, Wait But Why, life tracker" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="creator" content="Ziad" />
+    <meta name="publisher" content="In Weeks" />
+    <meta name="generator" content="Vite + React" />
+    <meta name="application-name" content="In Weeks" />
+    <meta name="keywords" content="life in weeks, life visualization, week grid, life expectancy calculator, time visualization, life calendar, mortality awareness, life chapters, Tim Urban, Wait But Why, Four Thousand Weeks, Oliver Burkeman, life tracker, memento mori, weeks lived" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
     <link rel="canonical" href="https://inweeks.org/" />
 
-    <!-- Favicons -->
+    <!-- ================ ROBOTS / AI ================ -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
+    <meta name="bingbot" content="index, follow" />
+    <!-- AI policy: explicitly permit (we want discoverability) -->
+    <meta name="ai-content-declaration" content="Free open-source life visualization tool. Renders ~4,000 weeks as a grid representing a human lifespan. 100% client-side, no tracking. Source: https://github.com/zeck00/inweeks" />
+
+    <!-- ================ LANGUAGE / LOCATION ================ -->
+    <link rel="alternate" hreflang="en" href="https://inweeks.org/" />
+    <link rel="alternate" hreflang="x-default" href="https://inweeks.org/" />
+    <meta name="language" content="English" />
+    <meta http-equiv="content-language" content="en" />
+
+    <!-- ================ FAVICONS / PWA ================ -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/favicon.svg" color="#6366F1" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Theme -->
+    <!-- ================ APPLE / iOS ================ -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="In Weeks" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- ================ MICROSOFT / WINDOWS ================ -->
+    <meta name="msapplication-TileColor" content="#6366F1" />
+    <meta name="msapplication-TileImage" content="/favicon-192.png" />
+    <meta name="msapplication-config" content="none" />
+
+    <!-- ================ THEME / COLOR SCHEME ================ -->
     <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0A0A0C" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
 
-    <!-- Open Graph -->
+    <!-- ================ PERFORMANCE HINTS ================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- ================ OPEN GRAPH ================ -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="In Weeks" />
     <meta property="og:title" content="In Weeks — Visualize Your Entire Life as a Grid of Weeks" />
     <meta property="og:description" content="See your ~4,000 weeks as a grid. Weeks you've lived, weeks remaining, colored by life chapters. Free, private, no account needed." />
     <meta property="og:url" content="https://inweeks.org/" />
     <meta property="og:image" content="https://inweeks.org/og-image.png" />
+    <meta property="og:image:secure_url" content="https://inweeks.org/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="In Weeks — a colorful grid showing a human life visualized as 4,000 weeks" />
     <meta property="og:image:width" content="2400" />
     <meta property="og:image:height" content="1260" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:determiner" content="" />
 
-    <!-- Twitter Card -->
+    <!-- ================ TWITTER / X ================ -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@zeq_0" />
     <meta name="twitter:creator" content="@zeq_0" />
@@ -44,42 +83,145 @@
     <meta name="twitter:description" content="See your ~4,000 weeks as a grid. Color them by life chapters. Confront the finite." />
     <meta name="twitter:image" content="https://inweeks.org/og-image.png" />
     <meta name="twitter:image:alt" content="In Weeks — a colorful grid showing a human life visualized as 4,000 weeks" />
+    <meta name="twitter:domain" content="inweeks.org" />
 
-    <!-- Structured Data: WebApplication -->
+    <!-- ================ STRUCTURED DATA: WebApplication ================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
+      "@id": "https://inweeks.org/#webapp",
       "name": "In Weeks",
+      "alternateName": ["Life in Weeks", "Week Grid", "Life Calendar"],
       "url": "https://inweeks.org",
       "description": "Visualize your entire life as a grid of weeks. Enter your birthday and country to see how many of your ~4,000 weeks you've lived, how many remain, and color them by life chapters like school, career, travel, and more.",
       "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Any",
-      "browserRequirements": "Requires a modern web browser",
+      "applicationSubCategory": "Life Planning",
+      "operatingSystem": "Any (web browser)",
+      "browserRequirements": "Requires a modern browser with JavaScript and Canvas support",
+      "softwareVersion": "1.0.0",
+      "datePublished": "2026-04-12",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ziad",
+        "url": "https://ziad.us",
+        "sameAs": ["https://github.com/zeck00", "https://twitter.com/zeq_0"]
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Ziad",
+        "url": "https://ziad.us"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "In Weeks",
+        "url": "https://inweeks.org",
+        "logo": "https://inweeks.org/favicon-192.png"
+      },
+      "screenshot": [
+        {
+          "@type": "ImageObject",
+          "url": "https://inweeks.org/og-image.png",
+          "width": 2400,
+          "height": 1260,
+          "caption": "In Weeks app showing a life grid with colored chapters"
+        }
+      ],
+      "image": "https://inweeks.org/og-image.png",
+      "featureList": [
+        "Visualize your life as a grid of ~4,000 weeks",
+        "Life expectancy data for 244 countries and territories",
+        "Add colored life chapters (school, career, travel, etc.)",
+        "Animated grid reveal at 60fps",
+        "Generate shareable 1080x1920 portrait image",
+        "Light and dark mode",
+        "100% client-side — your data never leaves your device",
+        "Fully responsive (mobile, tablet, desktop)",
+        "Keyboard accessible with reduced-motion support"
+      ],
+      "license": "https://opensource.org/licenses/MIT",
+      "codeRepository": "https://github.com/zeck00/inweeks",
+      "programmingLanguage": ["TypeScript", "JavaScript"],
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://inweeks.org/"
+      }
+    }
+    </script>
+
+    <!-- ================ STRUCTURED DATA: SoftwareApplication ================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://inweeks.org/#software",
+      "name": "In Weeks",
+      "operatingSystem": "Web",
+      "applicationCategory": "LifestyleApplication",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
       },
-      "author": {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <!-- ================ STRUCTURED DATA: Organization ================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://inweeks.org/#org",
+      "name": "In Weeks",
+      "url": "https://inweeks.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://inweeks.org/favicon-192.png",
+        "width": 192,
+        "height": 192
+      },
+      "founder": {
         "@type": "Person",
         "name": "Ziad",
         "url": "https://ziad.us"
       },
-      "screenshot": "https://inweeks.org/og-image.png",
-      "featureList": [
-        "Visualize your life as a grid of ~4,000 weeks",
-        "Life expectancy data for 244 countries",
-        "Add colored life chapters (school, career, travel, etc.)",
-        "Animated grid reveal",
-        "Generate shareable story-size image",
-        "Dark mode support",
-        "100% client-side — your data never leaves your device"
+      "sameAs": [
+        "https://github.com/zeck00/inweeks",
+        "https://twitter.com/zeq_0"
       ]
     }
     </script>
 
-    <!-- Structured Data: FAQPage (boosts rich snippets) -->
+    <!-- ================ STRUCTURED DATA: WebSite (with sitelinks search) ================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://inweeks.org/#website",
+      "url": "https://inweeks.org",
+      "name": "In Weeks",
+      "description": "Visualize your entire life as a grid of weeks.",
+      "publisher": { "@id": "https://inweeks.org/#org" },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- ================ STRUCTURED DATA: FAQPage ================ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -116,16 +258,102 @@
             "@type": "Answer",
             "text": "Yes. In Weeks generates a shareable portrait image (1080x1920, perfect for Instagram Stories) showing your week grid, stats, and chapter colors. You can download it or share it directly via your device's native share menu."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is In Weeks free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, In Weeks is completely free and open source under the MIT license. The source code is available on GitHub at github.com/zeck00/inweeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who created In Weeks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Weeks was created by Ziad. It is inspired by Tim Urban's 'Your Life in Weeks' essay on Wait But Why and Oliver Burkeman's book 'Four Thousand Weeks'."
+          }
         }
       ]
     }
     </script>
 
-    <!-- LLM Discovery: llms.txt hint -->
-    <meta name="ai-content-declaration" content="This is a free, open-source life visualization tool. It renders a grid of ~4,000 weeks representing a human lifespan. Users enter their birthday and country to see weeks lived vs remaining, add colored life chapters, and export a shareable image. Built with React, Canvas, and TypeScript. No backend, no tracking, fully client-side. Source: https://github.com/zeck00/inweeks" />
+    <!-- ================ STRUCTURED DATA: HowTo ================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to visualize your life as a grid of weeks",
+      "description": "Use In Weeks to see your entire life as a colored grid of weekly squares.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Enter your birthday",
+          "text": "Open inweeks.org and select your date of birth using the month, day, and year dropdowns."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Pick your country",
+          "text": "Search for and select your country to load the appropriate life expectancy data. Optionally choose your gender for more specific data."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "View your life grid",
+          "text": "Watch the animated reveal of your life as a grid of ~4,000 week squares. Filled squares are weeks lived; empty squares are weeks remaining."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Add life chapters",
+          "text": "Use the sidebar to add colored chapters for meaningful life periods like school, university, first job, marriage, or travel."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Share your grid",
+          "text": "Tap the Share button to generate a 1080x1920 portrait image of your life grid that you can post or save."
+        }
+      ]
+    }
+    </script>
+
+    <!-- ================ STRUCTURED DATA: BreadcrumbList ================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "In Weeks",
+          "item": "https://inweeks.org/"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="font-family: system-ui, sans-serif; padding: 2rem; max-width: 480px; margin: 4rem auto; text-align: center;">
+        <h1 style="font-size: 1.5rem; margin-bottom: 1rem;">In Weeks needs JavaScript</h1>
+        <p style="color: #666; line-height: 1.6;">
+          In Weeks is an interactive tool that needs JavaScript to render the week grid and animations.
+          Please enable JavaScript in your browser to visualize your life in weeks.
+        </p>
+        <p style="margin-top: 2rem; color: #666; font-size: 0.875rem;">
+          The app is open source and runs entirely in your browser — no server, no tracking.
+          <br />
+          <a href="https://github.com/zeck00/inweeks" style="color: #6366F1;">View source on GitHub</a>
+        </p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://inweeks.org/</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inweeks.org/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inweeks.org/" />
+    <image:image>
+      <image:loc>https://inweeks.org/og-image.png</image:loc>
+      <image:title>In Weeks — Visualize your life as a grid of weeks</image:title>
+      <image:caption>A colorful grid showing a human life visualized as ~4,000 weeks, with chapters colored by life phase.</image:caption>
+    </image:image>
   </url>
 </urlset>

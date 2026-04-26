@@ -1,0 +1,30 @@
+/* TEAM */
+
+Creator & Developer: Ziad
+Site:                https://ziad.us
+Twitter:             @zeq_0
+GitHub:              @zeck00
+Location:            Earth (~4,000 weeks remaining, on average)
+
+
+/* THANKS */
+
+Tim Urban (Wait But Why) — for the original "Your Life in Weeks" concept
+Oliver Burkeman — for the book "Four Thousand Weeks"
+United Nations Population Division — for the World Population Prospects data
+The open-source community — for React, Vite, TypeScript, Lucide, html-to-image
+
+
+/* SITE */
+
+Last update:   2026-04-12
+Standards:     HTML5, ES2022, CSS3
+Components:    React 19, TypeScript, Vite, CSS Modules
+Software:      VS Code, Claude Code
+License:       MIT
+Source:        https://github.com/zeck00/inweeks
+
+
+/* PHILOSOPHY */
+
+You have approximately 4,000 weeks. Make them count.

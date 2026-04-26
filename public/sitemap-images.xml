@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://inweeks.org/</loc>
+    <image:image>
+      <image:loc>https://inweeks.org/og-image.png</image:loc>
+      <image:title>In Weeks — Visualize your life as a grid of weeks</image:title>
+      <image:caption>The In Weeks open graph preview image showing a colorful week grid representing a human life.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inweeks.org/favicon.svg</image:loc>
+      <image:title>In Weeks logo</image:title>
+      <image:caption>The In Weeks logo — four squares representing weeks.</image:caption>
+    </image:image>
+  </url>
+</urlset>

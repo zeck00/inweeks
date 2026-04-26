@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live app
+    url: https://inweeks.org
+    about: Try In Weeks live
+  - name: Security vulnerability
+    url: https://github.com/zeck00/inweeks/security/advisories/new
+    about: Report a security issue privately
