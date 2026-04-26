@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { countries } from '../../data/life-expectancy';
 import { getLifeStats, parseISODate } from '../../utils/date';
 import { BirthdayStep } from './BirthdayStep';

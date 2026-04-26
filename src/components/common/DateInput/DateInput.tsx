@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from './DateInput.module.css';
 
 interface DateInputProps {
@@ -19,23 +19,19 @@ function getDaysInMonth(month: number, year: number): number {
   return new Date(year, month + 1, 0).getDate();
 }
 
+function parseInitial(value: string): { month: number; day: number; year: number } {
+  if (!value) return { month: -1, day: -1, year: -1 };
+  const [y, m, d] = value.split('-').map(Number);
+  return { year: y || -1, month: (m || 0) - 1, day: d || -1 };
+}
+
 export function DateInput({ label, value, onChange, min, max, error }: DateInputProps) {
-  const [month, setMonth] = useState(-1);
-  const [day, setDay] = useState(-1);
-  const [year, setYear] = useState(-1);
+  const initial = parseInitial(value);
+  const [month, setMonth] = useState(initial.month);
+  const [day, setDay] = useState(initial.day);
+  const [year, setYear] = useState(initial.year);
   const dayRef = useRef<HTMLSelectElement>(null);
   const yearRef = useRef<HTMLSelectElement>(null);
-  const initialized = useRef(false);
-
-  useEffect(() => {
-    if (value && !initialized.current) {
-      const [y, m, d] = value.split('-').map(Number);
-      setYear(y);
-      setMonth(m - 1);
-      setDay(d);
-      initialized.current = true;
-    }
-  }, [value]);
 
   const updateDate = (m: number, d: number, y: number) => {
     if (m >= 0 && d > 0 && y > 0) {

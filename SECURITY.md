@@ -2,10 +2,7 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security issue in In Weeks, please report it privately:
-
-1. **Preferred:** Open a [private security advisory](https://github.com/zeck00/inweeks/security/advisories/new) on GitHub
-2. **Alternative:** Email `security@inweeks.org` (if available)
+If you discover a security issue in In Weeks, please report it privately by opening a [private security advisory](https://github.com/zeck00/inweeks/security/advisories/new) on GitHub.
 
 Please **do not** open a public issue for security vulnerabilities.
 

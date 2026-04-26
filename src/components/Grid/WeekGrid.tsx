@@ -1,5 +1,5 @@
 import { useRef, useCallback, useEffect } from 'react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { useWeekCalculations } from '../../hooks/useWeekCalculations';
 import { useCanvasGrid } from '../../hooks/useCanvasGrid';
 import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion';

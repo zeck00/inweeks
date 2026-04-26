@@ -1,5 +1,4 @@
 Contact: https://github.com/zeck00/inweeks/security/advisories/new
-Contact: mailto:security@inweeks.org
 Expires: 2027-04-12T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://inweeks.org/.well-known/security.txt

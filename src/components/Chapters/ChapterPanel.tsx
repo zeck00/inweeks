@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { Button } from '../common/Button/Button';
 import { Modal } from '../common/Modal/Modal';
 import { ChapterForm } from './ChapterForm';

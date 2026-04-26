@@ -1,4 +1,4 @@
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { useWeekCalculations } from '../../hooks/useWeekCalculations';
 import { AnimatedCounter } from './AnimatedCounter';
 import styles from './StatsBar.module.css';

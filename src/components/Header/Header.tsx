@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Sun, Moon, RotateCcw, AlertTriangle } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { ShareButton } from '../ShareCard/ShareButton';
 import { Modal } from '../common/Modal/Modal';
 import { Button } from '../common/Button/Button';

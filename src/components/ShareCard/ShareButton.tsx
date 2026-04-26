@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback } from 'react';
 import { toBlob } from 'html-to-image';
 import { Download, Share2, Check } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '../../hooks/useApp';
 import { useWeekCalculations } from '../../hooks/useWeekCalculations';
 import { countries } from '../../data/life-expectancy';
 import { Button } from '../common/Button/Button';
